@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightItem - Virtual Office Solutions for Modern Businesses</title>
+    <meta name="description" content="Professional virtual office services powered by AI and cloud technology. Premium business addresses, intelligent mail management, and flexible workspace solutions.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #4285F4;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4285F4;
+        }
+
+        .cta-btn {
+            background: #4285F4;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #1976D2;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #FF9800;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #F57C00;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #4285F4;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .about-image {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23f0f0f0" width="400" height="300"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" font-family="Arial" font-size="18" fill="%23999">Modern Office Space</text></svg>') center/cover;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #4285F4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Technology Section */
+        .technology {
+            padding: 80px 0;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .tech-list {
+            list-style: none;
+        }
+
+        .tech-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .tech-list li:before {
+            content: "✓";
+            background: #4CAF50;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        /* AWS Section */
+        .aws-section {
+            background: linear-gradient(135deg, #232F3E 0%, #4285F4 100%);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .aws-content {
+            text-align: center;
+        }
+
+        .aws-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .aws-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .aws-feature {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Team Section */
+        .team {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #4285F4, #1976D2);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-form {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #4285F4;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #4285F4;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-content,
+            .tech-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">InsightItem</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-btn">Get Started</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Virtual Office Solutions for Modern Businesses</h1>
+            <p>Professional business addresses, intelligent mail management, and flexible workspace solutions - all powered by advanced cloud technology</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn-primary">Start Your Free Trial</a>
+                <a href="#services" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Active Virtual Office Clients</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15</h3>
+                    <p>Premium Business Locations</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.9%</h3>
+                    <p>Service Uptime Guarantee</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1,200+</h3>
+                    <p>Mail Items Processed Monthly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Revolutionizing Virtual Office Services</h2>
+                    <p>Founded in 2024, InsightItem is a cutting-edge technology platform that transforms traditional virtual office services through AI-powered automation and cloud-native infrastructure.</p>
+                    <p>We provide businesses worldwide with professional addresses, intelligent mail management, and flexible workspace solutions, all managed through our proprietary digital platform. Our mission is to enable companies to establish a professional presence anywhere, without the overhead of traditional office space.</p>
+                    <p>Our cloud-based platform processes thousands of mail items daily, manages meeting room bookings across multiple locations, and provides real-time business analytics to help our clients optimize their operations.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/ji1.jpg" width="600" height="auto" alt="Office view with city and sea landscape">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive Virtual Office Solutions</h2>
+                <p>Everything you need to establish and maintain a professional business presence</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Premium Business Addresses</h3>
+                    <p>Professional addresses in prestigious business districts with instant activation and verification across major cities worldwide.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📧</div>
+                    <h3>Intelligent Mail Management</h3>
+                    <p>AI-powered mail sorting and categorization with real-time digital notifications, scanning, and automated forwarding with tracking.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏛️</div>
+                    <h3>Flexible Meeting Spaces</h3>
+                    <p>On-demand access to premium meeting rooms with smart booking system, real-time availability, and full tech support included.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Business Registration Support</h3>
+                    <p>Complete business formation assistance, legal document handling and storage, plus compliance monitoring and alerts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <div class="tech-grid">
+                <div>
+                    <h2>Built on Advanced Cloud Technology</h2>
+                    <p>Our platform leverages cutting-edge AWS services to deliver reliable, scalable, and secure virtual office solutions.</p>
+                    <ul class="tech-list">
+                        <li>Serverless architecture using AWS Lambda and API Gateway</li>
+                        <li>Real-time data processing with Amazon Kinesis</li>
+                        <li>Secure document storage with Amazon S3 and encryption</li>
+                        <li>Global CDN deployment with CloudFront</li>
+                        <li>Computer vision for automated mail processing</li>
+                        <li>Natural language processing for customer inquiries</li>
+                        <li>Machine learning for fraud detection and analytics</li>
+                        <li>RESTful APIs for seamless third-party integration</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/ji2.png" width="600" style="
+                    padding-top: 70px;
+                    padding-bottom: 50px;
+                " alt="Office view with city and sea landscape">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AWS Partnership Section -->
+    <section class="aws-section">
+        <div class="container">
+            <div class="aws-content">
+                <h2>Strategic AWS Infrastructure Requirements</h2>
+                <p>Our platform requires robust AWS infrastructure to support global operations and advanced AI capabilities</p>
+                <div class="aws-features">
+                    <div class="aws-feature">
+                        <h3>High-Volume Processing</h3>
+                        <p>50,000+ mail items processed monthly with real-time image processing and OCR capabilities</p>
+                    </div>
+                    <div class="aws-feature">
+                        <h3>Global Infrastructure</h3>
+                        <p>Multi-region deployment across US, Europe, and Asia with low-latency access for international clients</p>
+                    </div>
+                    <div class="aws-feature">
+                        <h3>Advanced AI Services</h3>
+                        <p>Amazon Textract for document analysis, SES for communications, and Connect for customer service</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Experienced Leadership Team</h2>
+                <p>Industry veterans with deep expertise in PropTech, cloud computing, and business operations</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-photo">AK</div>
+                    <h3>Alex Kim</h3>
+                    <p><strong>CEO & Founder</strong></p>
+                    <p>12+ years in PropTech and business services. Former VP of Operations at major coworking company. MBA from Seoul National University Business School.</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">SC</div>
+                    <h3>Sarah Chen</h3>
+                    <p><strong>Chief Technology Officer</strong></p>
+                    <p>15+ years in cloud architecture and SaaS platforms. Former Senior Software Engineer at major tech company. Expert in AWS services and serverless architecture.</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">MP</div>
+                    <h3>Michael Park</h3>
+                    <p><strong>Chief Operating Officer</strong></p>
+                    <p>10+ years in facilities management and operations. Former Regional Manager overseeing 20+ business centers. Expert in service automation and process optimization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get Started Today</h2>
+                <p>Contact us to learn more about our virtual office solutions</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3>Request a Demo</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Business Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">How can we help you?</label>
+                            <textarea id="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Schedule Demo</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Phone:</strong> +82 0-2583-4019</p>
+                    <p><strong>KakaoTalk ID:</strong> house2023</p>
+                    <p><strong>Business Address:</strong><br>123 Gangnam Business Center<br>Seoul, South Korea 06292</p>
+                    
+                    <h3 style="margin-top: 2rem;">Business Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM KST</p>
+                    <p>Saturday: 10:00 AM - 2:00 PM KST</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>InsightItem</h4>
+                    <p>Professional virtual office solutions powered by advanced cloud technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="#services">Virtual Offices</a>
+                    <a href="#services">Mail Management</a>
+                    <a href="#services">Meeting Rooms</a>
+                    <a href="#services">Business Registration</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#team">Leadership Team</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#technology">Technology</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">GDPR Compliance</a>
+                </div>
+            </div>
+            <p style="border-top: 1px solid #555; padding-top: 1rem; margin-top: 2rem;">
+                © 2024 InsightItem.com. All rights reserved. | Business Registration: 123-45-67890
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We will contact you within 24 hours.');
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
